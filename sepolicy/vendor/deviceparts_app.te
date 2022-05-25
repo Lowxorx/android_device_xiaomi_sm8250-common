@@ -28,6 +28,8 @@ allow deviceparts_app {
 allow deviceparts_app system_app_data_file:dir create_dir_perms;
 allow deviceparts_app system_app_data_file:{ file lnk_file } create_file_perms;
 allow deviceparts_app system_data_file:dir { search };
+allow deviceparts_app default_prop:file { read };
+allow deviceparts_app hint_service:service_manager { find };
 
 allow deviceparts_app sysfs_leds:dir r_dir_perms;
 
